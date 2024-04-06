@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+    <html lang="en">
+      <head>
+        <title>Login | By Code Info</title>
+        <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+<body>
+<div class="wrapper">
+    <div class="button">
+        <form method="post">
+             {% csrf_token %}
+            <label for="phone_number"></label>
+            <input class="logIn" type="text" id="phone_number" name="phone_number" placeholder="Telefon raqam">
+            <label for="password"></label>
+            <input class="password" type="password"  name="password" id="password"  placeholder="Parol">
+            <input class="btn" type="submit" value="Yuborish">
+        </form>
+    </div>
+</div>
+</body>
+    </html>
